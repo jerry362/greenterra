@@ -498,6 +498,14 @@ const videosData = [
     thumb:
       "https://images.unsplash.com/photo-1681313409698-dbe22c68cfce?w=800&h=450&fit=crop&auto=format",
   },
+  {
+    id: 4,
+    title: "도심 속 수직정원 시뮬레이션",
+    desc: "미래 메가시티 빌딩 숲 속에서 구현되는 그린테라의 탄소 제로 수직 농장 가상 투어",
+    duration: "0:50",
+    thumb:
+      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=450&fit=crop&auto=format",
+  },
 ];
 
 const faqsData = [
@@ -873,6 +881,9 @@ function renderVideoPlayer() {
       </div>
     </div>
   `;
+
+  // 👇 [이 부분이 추가되었습니다: 데스크톱에서 4개 한 줄 정렬]
+  thumbs.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4";
 
   thumbs.innerHTML = videosData
     .map(
