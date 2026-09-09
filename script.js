@@ -6,8 +6,8 @@ const techTabsData = [
     label: "스마트팜 기술",
     en: "Smart Farm Tech",
     headline: "ICT와 생물학의 완벽한 융합",
-    desc: "그린테라의 독자적인 스마트팜 플랫폼은 최첨단 센서 기술과 데이터 분석을 통해 작물 재배 환경의 모든 변수를 정밀하게 통제합니다.",
-    img: "https://images.unsplash.com/photo-1622548066678-a25ead9d3849?w=800&h=560&fit=crop&auto=format",
+    desc: "술과 데이터 분석을 통해 작물 재배 환경의 모든 변수를 정밀하게 통제합니다.",
+    img: "img/스마트팜.png",
     features: [
       {
         icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>`,
@@ -37,7 +37,7 @@ const techTabsData = [
     en: "Automation",
     headline: "24시간 쉬지 않는 지능형 공정",
     desc: "입고부터 재배, 영양 공급, 수확에 이르기까지 전 과정을 자동화하여 사람의 개입을 최소화하고 생산성을 극대화합니다.",
-    img: "https://images.unsplash.com/photo-1774229637247-3cd45219826c?w=800&h=560&fit=crop&auto=format",
+    img: "img/자동화시스템.png",
     features: [
       {
         icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>`,
@@ -67,7 +67,7 @@ const techTabsData = [
     en: "AI Growing Environment",
     headline: "빅데이터와 AI가 만드는 최적의 생육 솔루션",
     desc: "수백만 건의 생육 데이터를 학습한 AI가 작물별 맞춤 환경을 스스로 학습하고 예측하여 최상의 품질을 유지합니다.",
-    img: "https://images.unsplash.com/photo-1668600372311-66950b110d64?w=800&h=560&fit=crop&auto=format",
+    img: "img/ai재배환경.png",
     features: [
       {
         icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>`,
@@ -293,6 +293,27 @@ function scrollToSection(id) {
   if (!el) return;
   const top = el.getBoundingClientRect().top + window.scrollY - 80;
   window.scrollTo({ top, behavior: "smooth" });
+}
+
+// 특정 탭을 활성화하면서 섹션으로 부드럽게 스크롤 이동하는 함수
+function goToTechTab(idx) {
+  // 1. 해당 탭 화면 렌더링
+  renderTech(idx);
+
+  // 2. 탭 버튼들의 스타일(초록색 활성 상태) 동기화
+  const tabBtns = document.querySelectorAll(".tech-tab-btn");
+  tabBtns.forEach((btn, i) => {
+    if (i === idx) {
+      btn.className =
+        "tech-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#2E7D32] text-white shadow-md";
+    } else {
+      btn.className =
+        "tech-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 text-[#2E7D32] hover:bg-[#C8E6C9]";
+    }
+  });
+
+  // 3. 테크놀로지 섹션 위치로 스크롤 이동
+  scrollToSection("technology");
 }
 
 // Navbar Scroll Effect

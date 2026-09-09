@@ -131,6 +131,7 @@
                   />
                 </svg>
               </button>
+              <!-- index.html 약 170~195번째 줄 부근 -->
               <div
                 class="nav-dropdown absolute top-full left-0 mt-1.5 w-44 bg-white rounded-2xl shadow-xl border border-gray-100 py-1.5 z-50 overflow-hidden hidden"
               >
@@ -139,8 +140,9 @@
                 >
                   핵심 기술
                 </div>
+                <!-- 스마트팜 기술 (0번) -->
                 <button
-                  onclick="scrollToSection('technology')"
+                  onclick="goToTechTab(0)"
                   class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#2E7D32] hover:bg-green-50 transition-colors flex items-center gap-2"
                 >
                   <span
@@ -148,8 +150,9 @@
                   ></span
                   >스마트팜 기술
                 </button>
+                <!-- 자동화 시스템 (1번) -->
                 <button
-                  onclick="scrollToSection('technology')"
+                  onclick="goToTechTab(1)"
                   class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#2E7D32] hover:bg-green-50 transition-colors flex items-center gap-2"
                 >
                   <span
@@ -157,8 +160,9 @@
                   ></span
                   >자동화 시스템
                 </button>
+                <!-- AI 재배 환경 (2번) -->
                 <button
-                  onclick="scrollToSection('technology')"
+                  onclick="goToTechTab(2)"
                   class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#2E7D32] hover:bg-green-50 transition-colors flex items-center gap-2"
                 >
                   <span
@@ -448,10 +452,11 @@
                 />
               </svg>
             </button>
+            <!-- index.html 약 380~410번째 줄 부근 모바일 Technology 아코디언 내부 -->
             <div class="mobile-acc-body hidden pl-4">
               <button
                 onclick="
-                  scrollToSection('technology');
+                  goToTechTab(0);
                   toggleMobileMenu(false);
                 "
                 class="block w-full text-left px-4 py-2.5 text-white/75 hover:text-[#8BC34A] text-sm"
@@ -460,7 +465,7 @@
               </button>
               <button
                 onclick="
-                  scrollToSection('technology');
+                  goToTechTab(1);
                   toggleMobileMenu(false);
                 "
                 class="block w-full text-left px-4 py-2.5 text-white/75 hover:text-[#8BC34A] text-sm"
@@ -469,7 +474,7 @@
               </button>
               <button
                 onclick="
-                  scrollToSection('technology');
+                  goToTechTab(2);
                   toggleMobileMenu(false);
                 "
                 class="block w-full text-left px-4 py-2.5 text-white/75 hover:text-[#8BC34A] text-sm"
@@ -2476,25 +2481,28 @@
               </div>
               <ul class="space-y-2.5 text-sm text-white/50">
                 <li>
+                  <!-- 스마트팜 기술 (0번 탭 활성화) -->
                   <button
-                    onclick="scrollToSection('technology')"
-                    class="hover:text-white"
+                    onclick="goToTechTab(0)"
+                    class="hover:text-white transition-colors"
                   >
                     스마트팜 기술
                   </button>
                 </li>
                 <li>
+                  <!-- 자동화 시스템 (1번 탭 활성화) -->
                   <button
-                    onclick="scrollToSection('technology')"
-                    class="hover:text-white"
+                    onclick="goToTechTab(1)"
+                    class="hover:text-white transition-colors"
                   >
                     자동화 시스템
                   </button>
                 </li>
                 <li>
+                  <!-- AI 재배 환경 (2번 탭 활성화) -->
                   <button
-                    onclick="scrollToSection('technology')"
-                    class="hover:text-white"
+                    onclick="goToTechTab(2)"
+                    class="hover:text-white transition-colors"
                   >
                     AI 재배 환경
                   </button>
