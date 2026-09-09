@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* Pretendard Font 및 부드러운 스크롤 */
+body.site-wrapper {
+  font-family:
+    "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Nav 상태 스타일 */
+.nav-glass {
+  background: rgba(27, 94, 32, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nav-solid {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* 스크롤 감지 리빌(Reveal) 애니메이션 */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero 배경 Ken Burns 효과 */
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenburns 22s ease-in-out infinite alternate;
+}
+
+/* 카드 인터랙션 */
+.card-lift {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* LED 점 빛번짐 & 펄스 효과 */
+.led-dot {
+  background-color: #22c55e;
+  box-shadow:
+    0 0 6px #22c55e,
+    0 0 12px rgba(34, 197, 94, 0.8),
+    0 0 18px rgba(34, 197, 94, 0.4);
+  animation: led-glow-pulse 2s infinite ease-in-out;
+}
+
+@keyframes led-glow-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow:
+      0 0 6px #22c55e,
+      0 0 14px rgba(34, 197, 94, 0.9),
+      0 0 20px rgba(34, 197, 94, 0.5);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(0.9);
+    box-shadow:
+      0 0 3px #22c55e,
+      0 0 8px rgba(34, 197, 94, 0.4);
+  }
+}
