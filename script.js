@@ -243,83 +243,233 @@ const productsData = [
 const galleryData = [
   {
     id: 1,
-    category: "스마트팜 내부",
-    img: "https://images.unsplash.com/photo-1707586387441-c6657a1dfeae?w=600&h=600&fit=crop&auto=format",
-    title: "다층 수직 재배 시스템",
-    desc: "수십 층으로 쌓인 모던한 수직농장에서 작물이 최적 LED 환경 아래 무균 재배됩니다.",
-    tags: ["수직농장", "LED", "무균재배"],
+    category: "스마트팜",
+    img: "img/스마트팜1.png",
+    title: "그린테라 메가 스마트팜 콤플렉스",
+    desc: "태양광 발전 패널과 대규모 다층 수직온실, 친환경 물류 인프라가 유기적으로 연결된 미래형 친환경 농업 클러스터 전경.",
+    tags: ["스마트팜단지", "태양광", "친환경농업", "글로벌메가팜"],
     prompt:
-      "ultra-clean vertical farm, multi-tier hydroponic shelves, lime green LED glow, cinematic, 8K",
+      "massive futuristic smart farm complex, large glass vertical greenhouse with solar roof panels, Greenterra logo, aerial drone view, sunny day, 8K render",
   },
   {
     id: 2,
-    category: "스마트팜 내부",
-    img: "https://images.unsplash.com/photo-1623251963103-511f665a9782?w=600&h=600&fit=crop&auto=format",
-    title: "클린룸 재배 전경",
-    desc: "외부 오염이 완전 차단된 밀폐형 클린룸 내부의 대규모 재배 시스템 전경.",
-    tags: ["클린룸", "밀폐형", "대규모"],
+    category: "스마트팜",
+    img: "img/스마트팜2.jpg",
+    title: "도심형 에코-아그리 파크",
+    desc: "곡면형 태양광 루프와 도심 수변 생태 공원이 융합되어 시민과 상생하는 혁신적인 수직 스마트팜 단지 아키텍처.",
+    tags: ["도심형수직농장", "에코파크", "친환경건축", "생태도시"],
     prompt:
-      "large scale indoor farm, clean room interior, lush green plants, futuristic, drone view",
+      "eco-agri complex, futuristic curved glass architectural greenhouse, lush park with pond, solar canopy, aerial view, cinematic lighting, 8K",
   },
   {
     id: 3,
-    category: "AI 모니터링",
-    img: "https://images.unsplash.com/photo-1631556759511-6ce895fbf0ad?w=600&h=600&fit=crop&auto=format",
-    title: "실시간 데이터 분석 팀",
-    desc: "AI 센서 데이터를 태블릿으로 실시간 분석하는 그린테라 연구진.",
-    tags: ["AI분석", "빅데이터", "연구팀"],
+    category: "스마트팜",
+    img: "img/스마트팜3.png",
+    title: "자율 이송 로봇과 AI 클린룸",
+    desc: "수직 다단 베드 사이를 자율주행하며 수확물을 운반하는 로봇 캐리어와 홀로그램 패널로 작물 생육 지수를 체크하는 스마트 공정.",
+    tags: ["자율주행로봇", "생육모니터링", "클린룸", "GreenBot"],
     prompt:
-      "scientists analyzing AI data tablet, smart farm monitoring, lab coats, professional",
+      "futuristic indoor vertical farm, AGV harvest transport robots, holographic crop health display 99.8%, researchers in lab coats, clean green LED lighting, 8K",
   },
   {
     id: 4,
-    category: "AI 모니터링",
-    img: "https://images.unsplash.com/photo-1669707040737-a6237bc0ae50?w=600&h=600&fit=crop&auto=format",
-    title: "AI 생육 진단 시스템",
-    desc: "전문 보호 장비를 착용한 연구원이 AI 진단 시스템을 운영하는 모습.",
-    tags: ["AI진단", "생육분석", "GreenBot"],
+    category: "스마트팜",
+    img: "img/스마트팜4.png",
+    title: "우드-글라스 중정형 수직 연구 팜",
+    desc: "자연 채광을 극대화한 중정 아트리움 구조의 목조 빌딩 속에서 자율 로봇 암(Arm)과 연구진이 협업하는 친환경 재배 시설.",
+    tags: ["스마트연구팜", "자연채광", "협동로봇", "친환경목조"],
     prompt:
-      "researcher in lab gear operating AI growth diagnosis system, futuristic lab, green glow",
+      "modern multi-story wooden atrium indoor farm, glass ceiling skylight, autonomous robotic inspection rover, female agricultural scientist, lush lettuce tiers, 8K",
   },
   {
     id: 5,
-    category: "재배 과정",
-    img: "https://images.unsplash.com/photo-1617183309923-427fedc0b7ea?w=600&h=600&fit=crop&auto=format",
-    title: "이슬 맺힌 청정 케일",
-    desc: "이른 아침 이슬이 맺힌 케일 잎. AI 센서 빔이 생육 상태를 스캔하는 매크로 컷.",
-    tags: ["케일", "무농약", "신선도"],
+    category: "스마트팜",
+    img: "img/스마트팜5.png",
+    title: "스마트 온실 자율 선별 로봇 Agri-Bot",
+    desc: "고정밀 로봇 암이 엽채류의 성숙도를 광학 스캔하여 정밀 수확하고, 전용 태블릿으로 데이터를 동기화하는 스마트 온실 시스템.",
+    tags: ["AgriBot", "정밀수확", "수경재배", "온실자동화"],
     prompt:
-      "macro shot of kale leaf with morning dew, AI scanner overlay, ultra-clean, 8K",
+      "high-tech greenhouse with stacked hydroponic shelves, white caterpillar robotic arm Agri-Bot harvesting lettuce, scientist monitoring with tablet, bright daylight, 8K",
   },
   {
     id: 6,
-    category: "재배 과정",
-    img: "https://images.unsplash.com/photo-1649470824391-f9e29e21d751?w=600&h=600&fit=crop&auto=format",
-    title: "신선한 잎채소 성장",
-    desc: "씨앗에서 청정한 잎채소로 성장하는 생육 과정의 근접 촬영.",
-    tags: ["잎채소", "성장과정", "청정재배"],
+    category: "스마트팜",
+    img: "img/스마트팜6.jpeg",
+    title: "스마트 작물 영양 및 잔류 성분 정밀 분석",
+    desc: "홀로그램 UI를 통해 재배된 채소의 비타민 함량과 무농약 안전성 지표를 실시간 분자 단위로 계측하는 첨단 R&D 연구소.",
+    tags: ["성분분석", "안전성검사", "무농약인증", "스마트R&D"],
     prompt:
-      "close up fresh green leafy plant, hydroponic growth, clean, vivid green",
+      "advanced agricultural R&D laboratory, female researcher operating spectrometer, holographic UI showing nutrient profile and zero pesticide safety check, test tubes with plant extracts, 8K",
+  },
+  {
+    id: 7,
+    category: "스마트팜",
+    img: "img/스마트팜7.png",
+    title: "100% 순환식 용수 재활용 시스템",
+    desc: "우수 집수부터 3단계 UV 나노 정화, 양액 밸런싱을 거쳐 90% 이상의 물을 재순환시키는 그린테라의 독자적 클로즈드 루프 수자원 기술.",
+    tags: ["용수재활용", "순환농업", "워터리사이클", "ESG기술"],
+    prompt:
+      "architectural cross-section of modern vertical farm, transparent 100% closed-loop water filtration and recycling system with glowing blue pipes and tanks, solar roof, cityscape background, 8K",
+  },
+  {
+    id: 19,
+    category: "AI 모니터링",
+    img: "img/모니터링1.png",
+    title: "AI 멀티 스펙트럼 영양 밸런스 분석",
+    desc: "AI 비전 카메라가 질소(N), 인(P), 칼륨(K) 등 5대 필수 무기질 균형과 엽면 세포 활성도를 실시간 측정해 14일 내 32% 생육 향상을 유도하는 정밀 분석 시스템.",
+    tags: ["멀티스펙트럼", "영양밸런스", "비전스캔", "생육최적화"],
+    prompt:
+      "advanced AI vision camera scanning fresh hydroponic lettuce, futuristic holographic HUD showing nutrient balance N P K and plant health index 98%, Greenterra lab background, 8K",
+  },
+  {
+    id: 20,
+    category: "AI 모니터링",
+    img: "img/모니터링2.png",
+    title: "AI 초미세 병충해 사전 감지 (99.8%)",
+    desc: "잎 단면의 미세 세포 구조를 돋보기형 AI 센서로 스캔해 병충해 조기 차단과 온·습도, CO₂, 광량(320μmol)의 최적 조합을 실시간 검증하는 지능형 모니터링.",
+    tags: ["병충해사전감지", "99.8%정확도", "미세세포스캔", "환경최적화"],
+    prompt:
+      "close-up of dew-covered lettuce leaf with glowing holographic circular scanner, HUD displaying plant health 99.8% and environmental metrics, vertical farm background, 8K",
+  },
+  {
+    id: 21,
+    category: "AI 모니터링",
+    img: "img/모니터링3.jpg",
+    title: "버터헤드 생육 추이 및 수확 디데이 예측",
+    desc: "파종 32일차 버터헤드 상추의 누적 생육 키(cm), H2O 포화도(93%), pH(6.2) 수치를 토대로 잔여 수확 일자(D-7)를 자동 연산하는 생육 예측 알고리즘.",
+    tags: ["수확예측", "생육트렌드", "버터헤드", "수경데이터"],
+    prompt:
+      "indoor hydroponic vertical shelves with fresh butterhead lettuce, floating HUD interface displaying growth trend curve, health optimal 96%, and estimated harvest 7 days, 8K",
+  },
+  {
+    id: 22,
+    category: "AI 모니터링",
+    img: "img/모니터링4.jpg",
+    title: "야외 스마트 필드 엽록소 및 NDVI 분석",
+    desc: "노지 및 개방형 스마트 팜 필드에서 작물 엽록소(512nm 파장)와 식생지수(NDVI 0.88), 예상 수확량(104%)을 실시간 증강현실(AR) HUD로 분석하는 테크놀로지.",
+    tags: ["NDVI지수", "엽록소스캔", "수확량예측", "스마트필드"],
+    prompt:
+      "green soybean plant in a smart farm field at sunrise, illuminated green scanning outline on leaf, holographic data HUD displaying chlorophyll 512nm and NDVI 0.88, 8K",
+  },
+  {
+    id: 12,
+    category: "재배 과정",
+    img: "img/재배과정1.png",
+    title: "AI 로봇 정밀 미스트 양액 공급",
+    desc: "AI 작물 모니터링 시스템과 연동된 로봇 암이 생육 데이터를 실시간 판독하며 최적의 미세 양액을 분사하는 자동화 재배 공정.",
+    tags: ["정밀관수", "양액제어", "로봇암", "스마트공정"],
+    prompt:
+      "advanced robotic arm spraying fine nutrient mist over lush green crops, AI crop monitoring screen displaying growth 98%, Greenterra vertical farm, 8K",
+  },
+  {
+    id: 13,
+    category: "재배 과정",
+    img: "img/재배과정2.jpg",
+    title: "듀얼 로보틱 스캐닝 & 미세 분사",
+    desc: "라임색 레이저 비전으로 작물 잎의 엽록소 상태를 초정밀 스캐닝함과 동시에 마이크로 노즐로 수분을 제어하는 하이테크 케어.",
+    tags: ["레이저스캔", "비전센서", "마이크로노즐", "생육케어"],
+    prompt:
+      "high-tech carbon fiber robotic arm emitting green laser scanner over young green seedlings, micro mist nozzles spraying, macro photography, 8K",
+  },
+  {
+    id: 14,
+    category: "재배 과정",
+    img: "img/재배과정3.jpg",
+    title: "새싹의 태동과 이슬 맺힘",
+    desc: "비옥한 스마트 배지에서 껍질을 깨고 힘차게 움튼 여린 새싹 잎 위에 맺힌 청명한 물방울 매크로 포커스.",
+    tags: ["발아", "새싹", "자연생명력", "매크로"],
+    prompt:
+      "macro close-up of a tiny green sprout emerging from rich soil with a perfect clear water droplet on its leaf, soft sunlight, bokeh, photorealistic, 8K",
+  },
+  {
+    id: 15,
+    category: "재배 과정",
+    img: "img/재배과정4.png",
+    title: "AI 6단계 생육 인포그래픽 타임라인",
+    desc: "씨앗 파종부터 발아, 어린 묘, 왕성한 성장, 수확기에 이르는 전 과정을 AI 센서(온도, 습도, CO₂, 광량 320μmol)로 정밀 제어하는 생육 로드맵.",
+    tags: ["생육타임라인", "AI생육분석", "단계별성장", "스마트파밍"],
+    prompt:
+      "horizontal plant growth stages from seed to mature lettuce, floating holographic UI showing temperature 22.4C and plant health 99.8%, Greenterra farm background, 8K",
+  },
+  {
+    id: 16,
+    category: "재배 과정",
+    img: "img/재배과정5.jpeg",
+    title: "지하부 뿌리 발달 단면",
+    desc: "토양 및 스마트 배지 속에서 씨앗이 수분을 흡수해 깊고 튼튼하게 뻗어 나가는 뿌리 시스템의 성장 단계별 지하 단면.",
+    tags: ["뿌리성장", "발아단면", "지하생육", "영양흡수"],
+    prompt:
+      "cross-section view of plant roots growing into rich soil, stages of seed germination to young seedling, detailed root hairs, macro studio photography, 8K",
+  },
+  {
+    id: 17,
+    category: "재배 과정",
+    img: "img/재배과정6.jpg",
+    title: "청정 케일 잎맥과 물방울 극접사",
+    desc: "무농약 무균 환경에서 건강하게 뻗은 청정 잎채소의 선명한 잎맥과 싱그러운 빗방울을 포착한 초근접 텍스처.",
+    tags: ["잎맥접사", "무농약", "극상의신선함", "수분텍스처"],
+    prompt:
+      "extreme macro shot of fresh green vegetable leaf with crystalline morning dew drops, intricate leaf veins, dark moody background, razor-sharp detail, 8K",
+  },
+  {
+    id: 18,
+    category: "재배 과정",
+    img: "img/재배과정7.png",
+    title: "아침 햇살 머금은 청정 버터헤드",
+    desc: "LED 최적 광량과 청정 수분을 듬뿍 머금어 씻지 않고 바로 먹을 수 있는 프리미엄 엽채류의 싱싱한 수확 직전 모습.",
+    tags: ["버터헤드", "수확직전", "청정먹거리", "햇살연출"],
+    prompt:
+      "close-up of vibrant fresh lettuce leaves covered with sparkling water droplets, glowing morning sunlight in a modern vertical farm, Greenterra logo background, 8K",
   },
   {
     id: 7,
     category: "미래 컨셉",
-    img: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&h=600&fit=crop&auto=format",
-    title: "ZERO-Carbon 솔라 팜",
-    desc: "태양광 패널로 100% 친환경 에너지를 공급하는 미래형 그린테라 단지 컨셉.",
-    tags: ["태양광", "ESG", "탄소제로"],
+    img: "img/미래컨셉1.jpeg",
+    title: "도심 공존형 버던트 버티컬 팜 타워",
+    desc: "고층 오피스 빌딩 숲 중심에서 사계절 청정 채소를 자급자족하고 도시 탄소를 정화하는 도심 생태 공존형 수직농장 타워.",
+    tags: ["수직농장타워", "도시생태", "탄소정화", "어반스마트팜"],
     prompt:
-      "solar panels at sunset, zero carbon smart farm, aerial view, cinematic blue hour",
+      "massive futuristic urban ecosystem coexistence building, verdant vertical farm skyscraper, modern glass facade covered with hanging plants, city streets with trams, aerial view, 8K render",
   },
   {
     id: 8,
     category: "미래 컨셉",
-    img: "https://images.unsplash.com/photo-1774229637247-3cd45219826c?w=600&h=600&fit=crop&auto=format",
-    title: "Green-Bot 수확 로봇",
-    desc: "라임색 레이저 빔으로 작물을 탐지하고 정밀하게 수확하는 Green-Bot 컨셉 이미지.",
-    tags: ["Green-Bot", "로봇수확", "자동화"],
+    img: "img/미래컨셉2.png",
+    title: "그린테라 바이오필릭 메가 아그리 타워",
+    desc: "유선형 테라스 녹지와 유리 온실 튜브가 감싸고 있는 미래형 초고층 랜드마크 농업 타워. 수변 공원과 연계된 청정 랜드스케이프 구현.",
+    tags: ["메가아그리타워", "바이오필릭", "스마트시티", "랜드마크"],
     prompt:
-      "futuristic robot arm with lime laser beam harvesting crops, dark background, 8K render",
+      "gigantic biophilic vertical farm skyscraper, Greenterra logo on glass facade, organic curved terraces with lush greenery, waterfront smart city, daylight, cinematic lighting, 8K",
+  },
+  {
+    id: 9,
+    category: "미래 컨셉",
+    img: "img/미래컨셉3.jpg",
+    title: "나선형 트위스트 스카이 스마트팜",
+    desc: "나선형으로 회전하며 자연 일조량을 극대화한 독창적인 트위스트 구조의 수직 스마트팜과 공중 스카이브릿지 보행로.",
+    tags: ["나선형온실", "트위스트타워", "스카이브릿지", "태양광루프"],
+    prompt:
+      "futuristic twisted helix skyscraper with integrated greenhouse pods, green rooftop gardens, solar panels, aerial pedestrian bridges, clean eco city street, 8K",
+  },
+  {
+    id: 10,
+    category: "미래 컨셉",
+    img: "img/미래컨셉4.png",
+    title: "도심 자율 연결형 하이퍼 버티컬 팜",
+    desc: "도시 간 고가 공중 회랑으로 유통망이 연결되고 대규모 유리 다단 재배실에서 청정 먹거리를 연중 연속 생산하는 도심 농업 허브.",
+    tags: ["스카이웨이", "도심식량허브", "자동화재배실", "하이퍼팜"],
+    prompt:
+      "hyper-futuristic multi-tier vertical farming skyscraper with connecting skybridges, glowing Greenterra signage, lush aeroponic chambers visible through glass, metropolis background, 8K",
+  },
+  {
+    id: 11,
+    category: "미래 컨셉",
+    img: "img/미래컨셉5.jpg",
+    title: "친환경 신재생 에너지 에코 실린더 팜",
+    desc: "옥상 태양광 패널과 소형 풍력 터빈으로 100% 자체 전력을 생산하며 트램 및 도심 녹지 축과 완벽히 연계된 원통형 클린 에너지 스마트팜.",
+    tags: ["풍력태양광", "에코실린더", "친환경트램", "탄소제로타워"],
+    prompt:
+      "cylindrical futuristic glass greenhouse tower with rooftop solar panels and micro wind turbines, modern green boulevard with electric trams, zero carbon eco architecture, 8K",
   },
 ];
 
@@ -407,17 +557,18 @@ function goToTechTab(idx) {
 }
 
 // Navbar Scroll Effect
+// Navbar Scroll Effect
 window.addEventListener("scroll", () => {
   const nav = document.getElementById("navbar");
-  const logoText = document.getElementById("nav-logo-text");
   const links = document.querySelectorAll(".nav-link");
   const toggleBtn = document.getElementById("mobile-toggle");
 
   if (window.scrollY > 60) {
+    // 스크롤을 내렸을 때: 흰색 불투명 배경 + 어두운 텍스트
     nav.classList.add("nav-solid");
     nav.classList.remove("nav-glass");
-    logoText.classList.replace("text-white", "text-[#1B5E20]");
-    toggleBtn.classList.replace("text-white", "text-[#2E7D32]");
+    if (toggleBtn) toggleBtn.classList.replace("text-white", "text-[#2E7D32]");
+
     links.forEach((link) => {
       link.classList.remove(
         "text-white",
@@ -431,10 +582,11 @@ window.addEventListener("scroll", () => {
       );
     });
   } else {
+    // 최상단에 있을 때: 반투명 글래스 배경 + 흰색 텍스트
     nav.classList.remove("nav-solid");
     nav.classList.add("nav-glass");
-    logoText.classList.replace("text-[#1B5E20]", "text-white");
-    toggleBtn.classList.replace("text-[#2E7D32]", "text-white");
+    if (toggleBtn) toggleBtn.classList.replace("text-[#2E7D32]", "text-white");
+
     links.forEach((link) => {
       link.classList.remove(
         "text-gray-800",
@@ -605,12 +757,14 @@ function renderProducts(category = "전체") {
 
 document.querySelectorAll(".prod-tab-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
+    // 모든 탭을 연한 연두색 비활성 스타일로 초기화
     document.querySelectorAll(".prod-tab-btn").forEach((b) => {
       b.className =
-        "prod-tab-btn px-5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 text-gray-600 hover:text-[#2E7D32] hover:bg-green-50";
+        "prod-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#F1F8E9] text-[#2E7D32] hover:bg-[#C8E6C9]";
     });
+    // 클릭된 탭만 짙은 초록색 활성 스타일로 변경
     btn.className =
-      "prod-tab-btn px-5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#2E7D32] text-white shadow";
+      "prod-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#2E7D32] text-white shadow-md";
     renderProducts(btn.dataset.cat);
   });
 });
@@ -618,21 +772,45 @@ document.querySelectorAll(".prod-tab-btn").forEach((btn) => {
 // Gallery
 function renderGallery(category = "전체") {
   const container = document.getElementById("gallery-grid");
-  const filtered =
-    category === "전체"
-      ? galleryData
-      : galleryData.filter((g) => g.category === category);
+  let filtered = [];
+
+  if (category === "전체") {
+    // 1. 전체 탭: 카테고리별 대표 1개씩 추출 (총 4개)
+    const catInternal = galleryData.find((g) => g.category === "스마트팜");
+    const catMonitoring = galleryData.find((g) => g.category === "AI 모니터링");
+    const catProcess = galleryData.find((g) => g.category === "재배 과정");
+    const catConcept = galleryData.find((g) => g.category === "미래 컨셉");
+
+    filtered = [catInternal, catMonitoring, catProcess, catConcept].filter(
+      Boolean,
+    );
+
+    // 전체 탭: 가장 큰 2열 배치 유지
+    container.className =
+      "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8";
+  } else {
+    // 2. 카테고리 탭: 해당 카테고리 전체 노출
+    filtered = galleryData.filter((g) => g.category === category);
+
+    // 카테고리 탭 전용: 4열 -> 3열(lg:grid-cols-3)로 변경하여 기존보다 카드 크기 확대!
+    container.className =
+      "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6";
+  }
+
+  // 전체/카테고리 탭 모두 와이드 뷰(4:3)로 통일하여 시원한 비율 제공
+  const aspectClass = "aspect-[4/3]";
 
   container.innerHTML = filtered
     .map(
-      (item, i) => `
-    <div onclick="openGalleryModal(${item.id})" class="group relative cursor-pointer rounded-2xl overflow-hidden bg-green-50 ${i % 5 === 0 ? "col-span-2 row-span-2" : ""}" style="aspect-ratio: 1/1;">
+      (item) => `
+    <div onclick="openGalleryModal(${item.id})" class="group relative cursor-pointer rounded-3xl overflow-hidden bg-green-50 ${aspectClass} shadow-md card-lift">
       <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-      <div class="absolute inset-0 flex flex-col justify-end p-4" style="background: linear-gradient(to top, rgba(27,94,32,0.88) 0%, rgba(27,94,32,0.2) 60%, transparent 100%);">
-        <div class="text-[#8BC34A] text-xs font-bold mb-1">${item.category}</div>
-        <div class="text-white font-bold text-sm">${item.title}</div>
-        <div class="flex gap-1 mt-2 flex-wrap">
-          ${item.tags.map((tag) => `<span class="px-2 py-0.5 rounded bg-white/15 text-white text-[10px]">#${tag}</span>`).join("")}
+      <div class="absolute inset-0 flex flex-col justify-end p-5 lg:p-6" style="background: linear-gradient(to top, rgba(27,94,32,0.92) 0%, rgba(27,94,32,0.2) 60%, transparent 100%);">
+        <div class="text-[#8BC34A] text-xs font-bold mb-1 tracking-wide">${item.category}</div>
+        <div class="text-white font-bold text-base lg:text-lg mb-1 truncate">${item.title}</div>
+        <p class="text-white/80 text-xs line-clamp-1 mb-2 hidden sm:block">${item.desc}</p>
+        <div class="flex gap-1.5 flex-wrap">
+          ${item.tags.map((tag) => `<span class="px-2.5 py-0.5 rounded-lg bg-white/20 text-white text-[11px] backdrop-blur-sm">#${tag}</span>`).join("")}
         </div>
       </div>
     </div>
