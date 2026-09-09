@@ -98,7 +98,7 @@ const productsData = [
     name: "유럽종 버터헤드 상추",
     en: "Butterhead Lettuce",
     category: "프리미엄 엽채류",
-    img: "https://images.unsplash.com/photo-1649470824391-f9e29e21d751?w=400&h=400&fit=crop&auto=format",
+    img: "img/버터헤드.png",
     nutrition: "비타민 K·A 풍부, 수분 95%",
     cert: ["무농약", "GAP"],
     desc: "부드럽고 아삭한 유럽형 상추. 씻지 않고 바로 섭취 가능.",
@@ -107,46 +107,127 @@ const productsData = [
     name: "슈퍼푸드 케일",
     en: "Superfoods Kale",
     category: "프리미엄 엽채류",
-    img: "https://images.unsplash.com/photo-1617183309923-427fedc0b7ea?w=400&h=400&fit=crop&auto=format",
+    img: "img/케일.png",
     nutrition: "비타민 C 200mg+, 항산화 성분",
     cert: ["무농약", "GAP", "HACCP"],
     desc: "영양 밀도 세계 1위 작물. AI 조명으로 최대 영양 함량 재배.",
   },
   {
+    name: "유럽종 오크리프",
+    en: "Oakleaf Lettuce",
+    category: "프리미엄 엽채류",
+    img: "img/오크리프.png",
+    nutrition: "비타민 C·E 풍부, 항산화 성분",
+    cert: ["무농약", "GAP"],
+    desc: "참나무 잎을 닮은 부드러운 식감. 쓴맛이 적고 단맛이 도는 고급 샐러드 채소.",
+  },
+  {
+    name: "버터헤드 카이피라",
+    en: "Caipira Lettuce",
+    category: "프리미엄 엽채류",
+    img: "img/카이피라.png",
+    nutrition: "식이섬유·칼슘 풍부, 수분 95%",
+    cert: ["무농약", "GAP"],
+    desc: "도톰하고 부드러운 잎의 결. 씹을수록 은은한 단맛과 아삭함이 느껴지는 품종.",
+  },
+  {
     name: "로메인 레터스",
     en: "Romaine Lettuce",
     category: "프리미엄 엽채류",
-    img: "https://images.unsplash.com/photo-1589664088344-aac0f999a1fc?w=400&h=400&fit=crop&auto=format",
+    img: "img/로메인.png",
     nutrition: "엽산·철분 풍부, 저칼로리",
     cert: ["무농약", "GAP"],
     desc: "시저 샐러드의 필수 재료. 아삭함과 청량감이 뛰어남.",
   },
   {
-    name: "스마트 방울토마토",
-    en: "Smart Cherry Tomato",
+    name: "크리스피 프릴아이스",
+    en: "Frillice Lettuce",
+    category: "프리미엄 엽채류",
+    img: "img/프릴아이스.png",
+    nutrition: "엽산·비타민 A 풍부, 저칼로리",
+    cert: ["무농약", "GAP"],
+    desc: "톱니 모양의 잎 끝이 주는 극상의 아삭함. 드레싱과 곁들여도 쉽게 숨이 죽지 않는 식감.",
+  },
+  {
+    name: "방울토마토",
+    en: "Cherry Tomato",
     category: "기능성 과채류",
-    img: "https://images.unsplash.com/photo-1759509295194-e85b92b24e15?w=400&h=400&fit=crop&auto=format",
+    img: "img/토마토.png",
     nutrition: "리코펜·비타민C 풍부",
     cert: ["무농약", "GAP"],
     desc: "당도 12브릭스 이상의 달콤한 방울토마토.",
   },
   {
-    name: "미니 파프리카",
-    en: "Mini Paprika",
+    name: "파프리카",
+    en: "Paprika",
     category: "기능성 과채류",
-    img: "https://images.unsplash.com/photo-1783923417295-daf9ada7d437?w=400&h=400&fit=crop&auto=format",
+    img: "img/파프리카.png",
     nutrition: "비타민C 257mg, 베타카로틴",
     cert: ["무농약"],
     desc: "선명한 색상과 풍부한 영양. 스낵으로도 즐기기 좋음.",
   },
   {
-    name: "스마트팜 허브 믹스",
-    en: "Herb Mix",
+    name: "샤인머스켓",
+    en: "Muscat",
+    category: "기능성 과채류",
+    img: "img/샤인머스켓.png",
+    nutrition: "폴리페놀·칼륨 풍부, 당도 18Brix+",
+    cert: ["무농약", "GAP"],
+    desc: "AI 광량 제어로 완성한 얇은 껍질과 풍부한 과즙. 망고 향의 깊은 풍미를 자랑하는 프리미엄 포도.",
+  },
+  {
+    name: "미니 애플수박",
+    en: "Mini Apple Watermelon",
+    category: "기능성 과채류",
+    img: "img/애플수박.png",
+    nutrition: "리코펜·시트룰린 풍부, 수분 92%",
+    cert: ["무농약", "GAP"],
+    desc: "사과처럼 깎아 먹는 얇은 껍질과 높은 당도. 1인 가구 디저트로 최적화된 고당도 미니 수박.",
+  },
+  {
+    name: "식물 성장 사운드 & 힐링 스피커",
+    en: "Plant Sound & Healing Speaker",
     category: "스마트 굿즈",
-    img: "https://images.unsplash.com/photo-1681313409698-dbe22c68cfce?w=400&h=400&fit=crop&auto=format",
-    nutrition: "항산화·항균 성분 다수",
-    cert: ["무농약"],
-    desc: "바질·루꼴라·치커리를 혼합한 프리미엄 허브 믹스.",
+    img: "img/식물 성장 사운드 & 힐링 스피커.png",
+    nutrition: "블루투스 연동, 생육 음파 케어",
+    cert: ["친환경", "KC인증"],
+    desc: "식물 생육을 촉진하는 특화 음파 기술과 감성 조명이 결합된 프리미엄 홈 가드닝 스피커.",
+  },
+  {
+    name: "신선도 유지 스마트 클립",
+    en: "Freshness Monitoring Smart Clip",
+    category: "스마트 굿즈",
+    img: "img/신선도 유지 스마트 클립.png",
+    nutrition: "온·습도 및 에틸렌 가스 정밀 감지",
+    cert: ["IoT인증", "KC인증"],
+    desc: "밀폐 용기에 장착하여 채소와 과일의 신선 상태 및 가스 농도를 스마트폰 앱으로 실시간 모니터링.",
+  },
+  {
+    name: "과채류 당도 측정 리모컨",
+    en: "Brix Sweetness Sensor",
+    category: "스마트 굿즈",
+    img: "img/과채류 당도 측정 리모컨.png",
+    nutrition: "비파괴 광학 당도(Brix) 측정",
+    cert: ["정밀센서", "KC인증"],
+    desc: "표면에 대는 즉시 과채류 손상 없이 10.8°Bx 이상의 고당도를 초정밀 수치로 측정하는 휴대용 센서.",
+  },
+  {
+    name: "마이크로 버블 세척 캡슐",
+    en: "Micro-Bubble Cleaning Capsule",
+    category: "스마트 굿즈",
+    img: "img/껍질째 먹는 채소_과일 전용 마이크로 버블 세척 캡슐.png",
+    nutrition: "잔류 농약 99.9% 무세제 분해 세척",
+    cert: ["친환경", "살균인증"],
+    desc: "물속에 담그면 초미세 마이크로 버블을 발생시켜 껍질째 먹는 농산물을 완벽하게 세척하는 캡슐 디바이스.",
+  },
+  {
+    name: "맞춤형 수직 스마트 가든 타워",
+    en: "Vertical Smart Garden Tower",
+    category: "스마트 굿즈",
+    img: "img/맞춤형 수직 스마트 가든 타워.png",
+    nutrition: "LED 광량·순환 양액 AI 전자동 제어",
+    cert: ["AI스마트", "KC인증"],
+    desc: "거실이나 주방에서 상추부터 미니 수박까지 사계절 청정 재배할 수 있는 도심형 수직 스마트 팜 타워.",
   },
 ];
 
@@ -465,15 +546,30 @@ const certColors = {
 
 function renderProducts(category = "전체") {
   const container = document.getElementById("products-grid");
-  const filtered =
-    category === "전체"
-      ? productsData
-      : productsData.filter((p) => p.category === category);
+
+  let filtered = [];
+
+  if (category === "전체") {
+    // 3가지 카테고리별로 각각 앞의 2개씩만 추출하여 총 6개 구성
+    const greens = productsData
+      .filter((p) => p.category === "프리미엄 엽채류")
+      .slice(0, 2);
+    const fruits = productsData
+      .filter((p) => p.category === "기능성 과채류")
+      .slice(0, 2);
+    const goods = productsData
+      .filter((p) => p.category === "스마트 굿즈")
+      .slice(0, 2);
+    filtered = [...greens, ...fruits, ...goods];
+  } else {
+    // 특정 카테고리 탭을 눌렀을 때는 해당 카테고리 상품 전체 표시
+    filtered = productsData.filter((p) => p.category === category);
+  }
 
   container.innerHTML = filtered
     .map(
-      (p, i) => `
-    <div onclick="openProductModal(${i})" class="group cursor-pointer rounded-3xl overflow-hidden bg-white shadow-md card-lift border border-gray-100">
+      (p) => `
+    <div onclick="openProductModalByName('${p.name}')" class="group cursor-pointer rounded-3xl overflow-hidden bg-white shadow-md card-lift border border-gray-100">
       <div class="relative aspect-square overflow-hidden bg-green-50">
         <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
         <div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
@@ -724,9 +820,12 @@ function openGalleryModal(id) {
   modalEl.classList.remove("hidden");
 }
 
-function openProductModal(idx) {
-  const p = productsData[idx];
+function openProductModalByName(productName) {
+  const p = productsData.find((item) => item.name === productName);
   if (!p) return;
+
+  // 카테고리가 '스마트 굿즈'면 '제품 스펙', 식품이면 '영양 정보'로 라벨 자동 분기
+  const infoLabel = p.category === "스마트 굿즈" ? "제품 스펙" : "영양 정보";
 
   modalEl.innerHTML = `
     <div class="bg-white rounded-3xl overflow-hidden max-w-lg w-full shadow-2xl relative" onclick="event.stopPropagation()">
@@ -745,7 +844,7 @@ function openProductModal(idx) {
         <p class="text-sm text-gray-500 mb-4">${p.en}</p>
         <p class="text-gray-700 text-sm leading-relaxed mb-4">${p.desc}</p>
         <div class="p-4 rounded-2xl bg-[#F1F8E9]">
-          <div class="text-xs font-bold text-[#2E7D32] uppercase tracking-wider mb-2">영양 정보</div>
+          <div class="text-xs font-bold text-[#2E7D32] uppercase tracking-wider mb-2">${infoLabel}</div>
           <p class="text-gray-700 text-sm">${p.nutrition}</p>
         </div>
       </div>
