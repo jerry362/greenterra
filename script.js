@@ -6,7 +6,7 @@ const techTabsData = [
     label: "스마트팜 기술",
     en: "Smart Farm Tech",
     headline: "ICT와 생물학의 완벽한 융합",
-    desc: "술과 데이터 분석을 통해 작물 재배 환경의 모든 변수를 정밀하게 통제합니다.",
+    desc: "기술과 데이터 분석을 통해 작물 재배 환경의 모든 변수를 정밀하게 통제합니다.",
     img: "img/스마트팜.png",
     features: [
       {
@@ -422,7 +422,7 @@ const galleryData = [
       "close-up of vibrant fresh lettuce leaves covered with sparkling water droplets, glowing morning sunlight in a modern vertical farm, Greenterra logo background, 8K",
   },
   {
-    id: 7,
+    id: 23,
     category: "미래 컨셉",
     img: "img/미래컨셉1.jpeg",
     title: "도심 공존형 버던트 버티컬 팜 타워",
@@ -432,7 +432,7 @@ const galleryData = [
       "massive futuristic urban ecosystem coexistence building, verdant vertical farm skyscraper, modern glass facade covered with hanging plants, city streets with trams, aerial view, 8K render",
   },
   {
-    id: 8,
+    id: 24,
     category: "미래 컨셉",
     img: "img/미래컨셉2.png",
     title: "그린테라 바이오필릭 메가 아그리 타워",
@@ -442,7 +442,7 @@ const galleryData = [
       "gigantic biophilic vertical farm skyscraper, Greenterra logo on glass facade, organic curved terraces with lush greenery, waterfront smart city, daylight, cinematic lighting, 8K",
   },
   {
-    id: 9,
+    id: 25,
     category: "미래 컨셉",
     img: "img/미래컨셉3.jpg",
     title: "나선형 트위스트 스카이 스마트팜",
@@ -452,7 +452,7 @@ const galleryData = [
       "futuristic twisted helix skyscraper with integrated greenhouse pods, green rooftop gardens, solar panels, aerial pedestrian bridges, clean eco city street, 8K",
   },
   {
-    id: 10,
+    id: 26,
     category: "미래 컨셉",
     img: "img/미래컨셉4.png",
     title: "도심 자율 연결형 하이퍼 버티컬 팜",
@@ -462,7 +462,7 @@ const galleryData = [
       "hyper-futuristic multi-tier vertical farming skyscraper with connecting skybridges, glowing Greenterra signage, lush aeroponic chambers visible through glass, metropolis background, 8K",
   },
   {
-    id: 11,
+    id: 27,
     category: "미래 컨셉",
     img: "img/미래컨셉5.jpg",
     title: "친환경 신재생 에너지 에코 실린더 팜",
@@ -540,15 +540,15 @@ function goToTechTab(idx) {
   // 1. 해당 탭 화면 렌더링
   renderTech(idx);
 
-  // 2. 탭 버튼들의 스타일(초록색 활성 상태) 동기화
+  // 2. 탭 버튼들의 스타일(초록색 활성 상태) 동기화 (모바일 폰트 크기 유지 클래스 포함)
   const tabBtns = document.querySelectorAll(".tech-tab-btn");
   tabBtns.forEach((btn, i) => {
     if (i === idx) {
       btn.className =
-        "tech-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#2E7D32] text-white shadow-md";
+        "tech-tab-btn flex-1 sm:flex-none px-3 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-[#2E7D32] text-white shadow-md text-center whitespace-nowrap";
     } else {
       btn.className =
-        "tech-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 text-[#2E7D32] hover:bg-[#C8E6C9]";
+        "tech-tab-btn flex-1 sm:flex-none px-3 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-[#2E7D32] hover:bg-[#C8E6C9] text-center whitespace-nowrap";
     }
   });
 
@@ -556,7 +556,6 @@ function goToTechTab(idx) {
   scrollToSection("technology");
 }
 
-// Navbar Scroll Effect
 // Navbar Scroll Effect
 window.addEventListener("scroll", () => {
   const nav = document.getElementById("navbar");
@@ -690,10 +689,10 @@ document.querySelectorAll(".tech-tab-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".tech-tab-btn").forEach((b) => {
       b.className =
-        "tech-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 text-[#2E7D32] hover:bg-[#C8E6C9]";
+        "tech-tab-btn flex-1 sm:flex-none px-3 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-[#2E7D32] hover:bg-[#C8E6C9] text-center whitespace-nowrap";
     });
     btn.className =
-      "tech-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#2E7D32] text-white shadow-md";
+      "tech-tab-btn flex-1 sm:flex-none px-3 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-[#2E7D32] text-white shadow-md text-center whitespace-nowrap";
     renderTech(Number(btn.dataset.idx));
   });
 });
