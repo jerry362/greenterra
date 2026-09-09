@@ -10,17 +10,17 @@ const techTabsData = [
     img: "https://images.unsplash.com/photo-1622548066678-a25ead9d3849?w=800&h=560&fit=crop&auto=format",
     features: [
       {
-        icon: "🌡️",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>`,
         title: "24시간 실시간 환경 감지",
         desc: "온·습도, CO₂, 광량, EC/pH 농도를 초단위로 측정",
       },
       {
-        icon: "📱",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>`,
         title: "원격 제어 시스템",
         desc: "어디서나 스마트폰으로 팜 환경을 실시간 제어",
       },
       {
-        icon: "🔒",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>`,
         title: "밀폐형 환경 제어",
         desc: "외부 오염물질을 100% 차단하는 클린룸 기술",
       },
@@ -40,17 +40,17 @@ const techTabsData = [
     img: "https://images.unsplash.com/photo-1774229637247-3cd45219826c?w=800&h=560&fit=crop&auto=format",
     features: [
       {
-        icon: "💧",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>`,
         title: "지능형 관수 시스템",
         desc: "작물 뿌리에 필요한 미세 영양액을 시간대별 정확 분사",
       },
       {
-        icon: "🦾",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2" /></svg>`,
         title: "로봇 수확 솔루션",
         desc: "머신비전 기반 로봇 팔이 완벽한 타이밍에 자율 수확",
       },
       {
-        icon: "⚡",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
         title: "전 공정 자동화",
         desc: "씨앗 파종부터 포장까지 인력 최소화 풀 자동화",
       },
@@ -70,17 +70,17 @@ const techTabsData = [
     img: "https://images.unsplash.com/photo-1668600372311-66950b110d64?w=800&h=560&fit=crop&auto=format",
     features: [
       {
-        icon: "🔬",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>`,
         title: "AI 병충해 사전 진단",
         desc: "이미지 분석으로 극미세 변색을 발생 전에 예측",
       },
       {
-        icon: "📊",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>`,
         title: "생육 예측 및 최적화",
         desc: "수확량과 영양분 함량을 예측하여 LED·영양 실시간 조정",
       },
       {
-        icon: "🧬",
+        icon: `<svg class="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>`,
         title: "딥러닝 생육 모델",
         desc: "100만 건+ 데이터로 학습된 작물별 맞춤 AI 알고리즘",
       },
