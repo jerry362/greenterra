@@ -27,30 +27,13 @@
           <!-- Logo -->
           <button
             onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            class="flex items-center gap-2.5 flex-shrink-0"
+            class="flex items-center flex-shrink-0"
           >
-            <div
-              class="w-9 h-9 rounded-xl bg-[#2E7D32] flex items-center justify-center shadow-md"
-            >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path
-                  d="M10 2C7 2 4.5 4.5 4.5 8c0 2.5 1.5 4.5 3 5.5l2.5-5 2.5 5c1.5-1 3-3 3-5.5C15.5 4.5 13 2 10 2z"
-                  fill="#8BC34A"
-                />
-                <path
-                  d="M10 13.5V18"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
-            <span
-              id="nav-logo-text"
-              class="text-xl font-bold tracking-tight text-white transition-colors"
-            >
-              Green<span class="text-[#8BC34A]">Terra</span>
-            </span>
+            <img
+              src="img/logo.png"
+              alt="GreenTerra"
+              class="h-9 w-auto object-contain"
+            />
           </button>
 
           <!-- Desktop Menu -->
@@ -1502,7 +1485,7 @@
             >
               <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
                 <img
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop&auto=format"
+                  src="img/ESG경영-E.png"
                   alt="환경"
                   class="w-full h-full object-cover"
                 />
@@ -1627,7 +1610,7 @@
             >
               <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
                 <img
-                  src="https://images.unsplash.com/photo-1767966783202-c5659292bd39?w=600&h=400&fit=crop&auto=format"
+                  src="img/ESG경영-S.jpeg"
                   alt="사회"
                   class="w-full h-full object-cover"
                 />
@@ -1751,7 +1734,7 @@
             >
               <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
                 <img
-                  src="https://images.unsplash.com/photo-1668600372311-66950b110d64?w=600&h=400&fit=crop&auto=format"
+                  src="img/ESG경영-G.png"
                   alt="지배구조"
                   class="w-full h-full object-cover"
                 />
@@ -2298,26 +2281,22 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 mb-12">
           <div class="lg:col-span-2">
-            <div class="flex items-center gap-2.5 mb-5">
-              <div
-                class="w-10 h-10 rounded-xl bg-[#2E7D32] flex items-center justify-center shadow"
+            <!-- 푸터 통합 로고 -->
+            <div class="mb-5">
+              <a
+                href="#"
+                onclick="
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  return false;
+                "
+                class="inline-block -translate-x-2"
               >
-                <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M10 2C7 2 4.5 4.5 4.5 8c0 2.5 1.5 4.5 3 5.5l2.5-5 2.5 5c1.5-1 3-3 3-5.5C15.5 4.5 13 2 10 2z"
-                    fill="#8BC34A"
-                  />
-                  <path
-                    d="M10 13.5V18"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </div>
-              <span class="text-2xl font-bold"
-                >Green<span class="text-[#8BC34A]">Terra</span></span
-              >
+                <img
+                  src="img/logo.png"
+                  alt="GreenTerra"
+                  class="h-9 sm:h-10 w-auto object-contain"
+                />
+              </a>
             </div>
             <p class="text-white/55 text-sm leading-relaxed mb-6 max-w-xs">
               AI 기술과 친환경 농업의 융합으로 지속 가능한 내일을 만드는 미래

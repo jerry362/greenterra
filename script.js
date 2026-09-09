@@ -229,6 +229,15 @@ const productsData = [
     cert: ["AI스마트", "KC인증"],
     desc: "거실이나 주방에서 상추부터 미니 수박까지 사계절 청정 재배할 수 있는 도심형 수직 스마트 팜 타워.",
   },
+  {
+    name: "AI 엽채류 영양 매니저 팟",
+    en: "AI Smart Hydroponic Planter Pot",
+    category: "스마트 굿즈",
+    img: "img/AI 엽채류 영양 매니저 팟.png",
+    nutrition: "LED 파장·수분·양액 지능형 자동 공급",
+    cert: ["친환경", "KC인증"],
+    desc: "주방이나 식탁 위에서 신선한 엽채류를 무농약으로 손쉽게 키우는 IoT 스마트 수경재배기. 맞춤형 광량과 급수 알림을 자동 지원합니다.",
+  },
 ];
 
 const galleryData = [
