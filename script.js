@@ -476,35 +476,39 @@ const galleryData = [
 const videosData = [
   {
     id: 1,
-    title: "그린테라 브랜드 하이라이트 필름",
-    desc: "이른 아침 안개가 걷히는 태양광 온실 단지 드론 뷰 → 내부 로봇 수확 → 작물 근접 샷 → 그린테라 로고",
-    duration: "0:45",
-    thumb:
-      "https://images.unsplash.com/photo-1622548066678-a25ead9d3849?w=800&h=450&fit=crop&auto=format",
+    title: "그린테라 브랜드 스토리",
+    desc: "땀 흘리던 전통 농업에서 그린테라의 첨단 AI 스마트팜으로, 내일의 풍요로운 농업이 시작됩니다.",
+    duration: "0:36",
+    youtubeId: "iVepVowAQXk",
+    youtubeUrl: "https://youtu.be/iVepVowAQXk",
+    thumb: "img/1번.png",
   },
   {
     id: 2,
     title: "스마트팜 자동화 시스템",
-    desc: "미세 안개(Mist) 양액이 작물 뿌리에 자동 분사되고 Green-Bot이 라임색 빔으로 수확하는 루프 영상",
-    duration: "0:10",
-    thumb:
-      "https://images.unsplash.com/photo-1623413649787-d7c0c07b4f3b?w=800&h=450&fit=crop&auto=format",
+    desc: "미세 안개 양액 분사와 Green-Bot 수확으로 생산성을 극대화 할 수 있습니다.",
+    duration: "0:11",
+    youtubeId: "72h8aCEYtSc",
+    youtubeUrl: "https://youtu.be/72h8aCEYtSc",
+    thumb: "img/2번.png",
   },
   {
     id: 3,
-    title: "AI 타임랩스 생육 스토리",
-    desc: "AI 조명 아래에서 씨앗에서 웅장한 케일/상추로 초고속 성장하는 타임랩스 3D 애니메이션",
-    duration: "0:30",
-    thumb:
-      "https://images.unsplash.com/photo-1681313409698-dbe22c68cfce?w=800&h=450&fit=crop&auto=format",
+    title: "AI 생육 스토리",
+    desc: "AI 조명 아래 씨앗에서 대형 작물로 초고속 성장하는 과정을 담았습니다.",
+    duration: "0:09",
+    youtubeId: "4K45FrYQQv8",
+    youtubeUrl: "https://youtu.be/4K45FrYQQv8",
+    thumb: "img/3번.png",
   },
   {
     id: 4,
-    title: "도심 속 수직정원 시뮬레이션",
-    desc: "미래 메가시티 빌딩 숲 속에서 구현되는 그린테라의 탄소 제로 수직 농장 가상 투어",
-    duration: "0:50",
-    thumb:
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=450&fit=crop&auto=format",
+    title: "스마트팜 하이라이트 필름",
+    desc: "스마트한 케어와 AI 로봇의 정밀 수확으로 언제나 싱싱한 농작물을 완성하는 그린테라입니다.",
+    duration: "0:49",
+    youtubeId: "HQPXacUfJZI",
+    youtubeUrl: "https://youtu.be/HQPXacUfJZI",
+    thumb: "img/4번.png",
   },
 ];
 
@@ -844,45 +848,46 @@ function renderVideoPlayer() {
   const thumbs = document.getElementById("video-thumbnails");
   if (!player || !thumbs) return;
 
-  player.innerHTML = `
-    <img src="${currentVideo.thumb}" alt="${currentVideo.title}" class="w-full h-full object-cover opacity-80" />
-    <div class="absolute inset-0 flex flex-col items-center justify-center">
-      ${
-        !isVideoPlaying
-          ? `
-        <button onclick="playVideo(true)" class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/20 hover:bg-[#8BC34A] border-2 border-white transition-all duration-300 hover:scale-110 shadow-xl">
+  if (isVideoPlaying) {
+    player.innerHTML = `
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube-nocookie.com/embed/${currentVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1&playsinline=1"
+        title="${currentVideo.title}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <button
+        onclick="playVideo(false)"
+        class="absolute top-4 right-4 z-10 px-4 py-2 rounded-xl bg-black/55 hover:bg-black/75 backdrop-blur-sm text-white text-sm font-semibold border border-white/20 transition-colors"
+        aria-label="영상 닫기"
+      >
+        ✕ 영상 닫기
+      </button>
+    `;
+  } else {
+    player.innerHTML = `
+      <img src="${currentVideo.thumb}" alt="${currentVideo.title}" class="w-full h-full object-cover opacity-80" />
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <button onclick="playVideo(true)" class="group flex items-center justify-center w-20 h-20 rounded-full bg-white/20 hover:bg-[#8BC34A] border-2 border-white transition-all duration-300 hover:scale-110 shadow-xl" aria-label="${currentVideo.title} 재생">
           <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         </button>
-      `
-          : `
-        <div class="flex flex-col items-center gap-4">
-          <div class="flex gap-2">
-            <div class="w-2 bg-[#8BC34A] rounded-full h-8 animate-pulse"></div>
-            <div class="w-2 bg-[#8BC34A] rounded-full h-12 animate-pulse" style="animation-delay: 0.2s"></div>
-            <div class="w-2 bg-[#8BC34A] rounded-full h-6 animate-pulse" style="animation-delay: 0.4s"></div>
-            <div class="w-2 bg-[#8BC34A] rounded-full h-10 animate-pulse" style="animation-delay: 0.1s"></div>
-            <div class="w-2 bg-[#8BC34A] rounded-full h-7 animate-pulse" style="animation-delay: 0.3s"></div>
-          </div>
-          <div class="text-white/80 text-sm font-medium">재생 중...</div>
-          <button onclick="playVideo(false)" class="px-5 py-2 rounded-xl bg-white/20 text-white text-sm hover:bg-white/30 transition-colors">
-            ⏸ 일시정지
-          </button>
-        </div>
-      `
-      }
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 p-6" style="background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);">
-      <div class="flex items-end justify-between">
-        <div>
-          <div class="text-[#8BC34A] text-xs font-semibold mb-1">그린테라 공식 영상</div>
-          <h3 class="text-white font-bold text-lg">${currentVideo.title}</h3>
-        </div>
-        <span class="px-2.5 py-1 rounded-lg bg-black/40 text-white text-sm font-mono">${currentVideo.duration}</span>
       </div>
-    </div>
-  `;
+      <div class="absolute bottom-0 left-0 right-0 p-6" style="background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);">
+        <div class="flex items-end justify-between gap-4">
+          <div>
+            <div class="text-[#8BC34A] text-xs font-semibold mb-1">그린테라 공식 영상</div>
+            <h3 class="text-white font-bold text-lg">${currentVideo.title}</h3>
+          </div>
+          <span class="px-2.5 py-1 rounded-lg bg-black/40 text-white text-sm font-mono">${currentVideo.duration}</span>
+        </div>
+      </div>
+    `;
+  }
 
-  // 👇 [이 부분이 추가되었습니다: 데스크톱에서 4개 한 줄 정렬]
+  // 데스크톱에서 4개 한 줄 정렬 / 태블릿 2개 / 모바일 1개
   thumbs.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4";
 
   thumbs.innerHTML = videosData
