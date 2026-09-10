@@ -114,7 +114,6 @@
                   />
                 </svg>
               </button>
-              <!-- index.html 약 170~195번째 줄 부근 -->
               <div
                 class="nav-dropdown absolute top-full left-0 mt-1.5 w-44 bg-white rounded-2xl shadow-xl border border-gray-100 py-1.5 z-50 overflow-hidden hidden"
               >
@@ -123,7 +122,6 @@
                 >
                   핵심 기술
                 </div>
-                <!-- 스마트팜 기술 (0번) -->
                 <button
                   onclick="goToTechTab(0)"
                   class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#2E7D32] hover:bg-green-50 transition-colors flex items-center gap-2"
@@ -133,7 +131,6 @@
                   ></span
                   >스마트팜 기술
                 </button>
-                <!-- 자동화 시스템 (1번) -->
                 <button
                   onclick="goToTechTab(1)"
                   class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#2E7D32] hover:bg-green-50 transition-colors flex items-center gap-2"
@@ -143,7 +140,6 @@
                   ></span
                   >자동화 시스템
                 </button>
-                <!-- AI 재배 환경 (2번) -->
                 <button
                   onclick="goToTechTab(2)"
                   class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#2E7D32] hover:bg-green-50 transition-colors flex items-center gap-2"
@@ -435,7 +431,6 @@
                 />
               </svg>
             </button>
-            <!-- index.html 약 380~410번째 줄 부근 모바일 Technology 아코디언 내부 -->
             <div class="mobile-acc-body hidden pl-4">
               <button
                 onclick="
@@ -536,17 +531,45 @@
     </nav>
 
     <main>
-      <!-- ==================== HERO ==================== -->
+      <!-- ==================== HERO (3개 영상 자동 재생 및 막대바 인디케이터) ==================== -->
       <section
         id="home"
-        class="relative min-h-screen flex flex-col overflow-hidden"
+        class="relative min-h-screen flex flex-col justify-end overflow-hidden"
       >
-        <div class="absolute inset-0 overflow-hidden bg-[#1B5E20]">
-          <img
-            src="https://images.unsplash.com/photo-1623251963103-511f665a9782?w=1920&h=1080&fit=crop&auto=format"
-            alt="수직 스마트팜 내부"
-            class="w-full h-full object-cover animate-ken-burns origin-center"
-          />
+        <!-- 배경 비디오 슬라이드 컨테이너 -->
+        <div
+          id="hero-video-container"
+          class="absolute inset-0 overflow-hidden bg-[#1B5E20]"
+        >
+          <!-- 비디오 1 -->
+          <video
+            class="hero-vid absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+            autoplay
+            muted
+            playsinline
+            onended="nextHeroVideo()"
+          >
+            <source src="img/비전1.mp4" type="video/mp4" />
+          </video>
+          <!-- 비디오 2 -->
+          <video
+            class="hero-vid absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+            muted
+            playsinline
+            onended="nextHeroVideo()"
+          >
+            <source src="img/로드맵.mp4" type="video/mp4" />
+          </video>
+          <!-- 비디오 3 -->
+          <video
+            class="hero-vid absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+            muted
+            playsinline
+            onended="nextHeroVideo()"
+          >
+            <source src="img/비전1.mp4" type="video/mp4" />
+          </video>
+
           <div
             class="absolute inset-0"
             style="
@@ -569,190 +592,40 @@
           ></div>
         </div>
 
+        <!-- 중앙 하단 재생 막대바 (인디케이터) 영역 -->
         <div
-          class="relative z-10 flex flex-col items-center justify-center flex-1 text-center px-4 pt-28 pb-8"
+          class="relative z-10 w-full max-w-xl mx-auto px-4 pb-12 flex justify-center items-center gap-3"
         >
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#8BC34A]/20 border border-[#8BC34A]/40 text-[#8BC34A] text-sm font-normal mb-8 backdrop-blur-sm"
+          <button
+            onclick="switchHeroVideo(0)"
+            class="flex-1 h-1.5 bg-white/30 rounded-full overflow-hidden group focus:outline-none"
+            aria-label="영상 1 재생"
           >
-            <span
-              class="w-2.5 h-2.5 rounded-full led-dot inline-block flex-shrink-0"
-            ></span>
-            AI &amp; Eco-Tech Agriculture
-          </div>
-
-          <h1
-            class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.12] mb-6 max-w-4xl"
-          >
-            AI와 자연이 만드는<br />
-            <span class="text-[#8BC34A]">농업의 푸른 미래</span>,<br />
-            그린테라
-          </h1>
-
-          <p
-            class="text-lg sm:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed"
-          >
-            빅데이터 생육 제어와 친환경 스마트팜 솔루션으로<br
-              class="hidden sm:block"
-            />
-            계절과 장소를 넘어선 청정 농업의 신기술을 제시합니다.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-center gap-4">
-            <button
-              onclick="scrollToSection('technology')"
-              class="flex items-center gap-2 px-8 py-3.5 bg-[#8BC34A] text-white font-bold rounded-2xl hover:bg-[#7CB342] transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 text-base"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"
-                />
-              </svg>
-              스마트팜 기술 탐색
-            </button>
-            <button
-              onclick="scrollToSection('video')"
-              class="flex items-center gap-2 px-8 py-3.5 bg-transparent text-white font-bold rounded-2xl border-2 border-white/60 hover:border-white hover:bg-white/10 transition-all duration-200 text-base"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              홍보 영상 보기
-            </button>
-          </div>
-
-          <div class="mt-16 flex flex-col items-center gap-2 text-white/50">
-            <span class="text-xs tracking-widest uppercase">Scroll</span>
             <div
-              class="w-px h-10 bg-gradient-to-b from-white/40 to-transparent"
+              id="bar-0"
+              class="h-full bg-[#8BC34A] w-0 transition-all duration-100"
             ></div>
-          </div>
-        </div>
-
-        <div class="relative z-10 mx-4 mb-6 sm:mx-8 lg:mx-auto lg:max-w-4xl">
-          <div
-            class="rounded-2xl border border-white/20 px-6 py-5 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 sm:divide-x divide-white/20"
-            style="
-              background: rgba(255, 255, 255, 0.08);
-              backdrop-filter: blur(20px);
-              -webkit-backdrop-filter: blur(20px);
-            "
+          </button>
+          <button
+            onclick="switchHeroVideo(1)"
+            class="flex-1 h-1.5 bg-white/30 rounded-full overflow-hidden group focus:outline-none"
+            aria-label="영상 2 재생"
           >
-            <div class="flex items-center gap-4 sm:justify-center sm:px-8">
-              <div
-                class="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#8BC34A]"
-              >
-                <svg
-                  class="w-7 h-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                  />
-                </svg>
-              </div>
-              <div>
-                <div
-                  class="text-[#8BC34A] font-extrabold text-2xl leading-none"
-                >
-                  90%
-                </div>
-                <div class="text-white font-semibold text-sm mt-0.5">
-                  용수 절감
-                </div>
-                <div class="text-white/50 text-xs">순환 재활용 시스템</div>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 sm:justify-center sm:px-8">
-              <div
-                class="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#8BC34A]"
-              >
-                <svg
-                  class="w-7 h-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                  />
-                </svg>
-              </div>
-              <div>
-                <div
-                  class="text-[#8BC34A] font-extrabold text-2xl leading-none"
-                >
-                  100%
-                </div>
-                <div class="text-white font-semibold text-sm mt-0.5">
-                  무농약 재배
-                </div>
-                <div class="text-white/50 text-xs">완전 무농약 청정 재배</div>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 sm:justify-center sm:px-8">
-              <div
-                class="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#8BC34A]"
-              >
-                <svg
-                  class="w-7 h-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <div>
-                <div
-                  class="text-[#8BC34A] font-extrabold text-2xl leading-none"
-                >
-                  24/7
-                </div>
-                <div class="text-white font-semibold text-sm mt-0.5">
-                  AI 자동화
-                </div>
-                <div class="text-white/50 text-xs">연중무휴 지능형 제어</div>
-              </div>
-            </div>
-          </div>
+            <div
+              id="bar-1"
+              class="h-full bg-[#8BC34A] w-0 transition-all duration-100"
+            ></div>
+          </button>
+          <button
+            onclick="switchHeroVideo(2)"
+            class="flex-1 h-1.5 bg-white/30 rounded-full overflow-hidden group focus:outline-none"
+            aria-label="영상 3 재생"
+          >
+            <div
+              id="bar-2"
+              class="h-full bg-[#8BC34A] w-0 transition-all duration-100"
+            ></div>
+          </button>
         </div>
       </section>
 
@@ -811,7 +684,7 @@
               >
                 <p class="text-gray-700 italic text-sm leading-relaxed mb-3">
                   "농업은 인류의 가장 오래된 생존 방식이자, 미래 기술이 집약될
-                  최종 목적지입니다. 그린테라는 지구 환경을 보호하고 다음
+                  최종 목적지입니다. 그린테라가 지구 환경을 보호하고 다음
                   세대에게 가장 깨끗한 먹거리를 전하는 기술 생태계를
                   구축하겠습니다."
                 </p>
@@ -1293,14 +1166,12 @@
 
           <div class="flex justify-center mb-8">
             <div id="product-tabs" class="flex gap-2 flex-wrap justify-center">
-              <!-- 활성 탭: 짙은 초록 배경 + 흰색 글씨 + 그림자 -->
               <button
                 class="prod-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#2E7D32] text-white shadow-md"
                 data-cat="전체"
               >
                 전체
               </button>
-              <!-- 비활성 탭: 연한 연두색 배경 + 짙은 초록 글씨 -->
               <button
                 class="prod-tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 bg-[#F1F8E9] text-[#2E7D32] hover:bg-[#C8E6C9]"
                 data-cat="프리미엄 엽채류"
@@ -2167,7 +2038,6 @@
                         <option>기타</option>
                       </select>
 
-                      <!-- 위치를 조절할 수 있는 꺾쇠 아이콘 (right-5로 왼쪽 이동) -->
                       <div
                         class="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-gray-500"
                       >
@@ -2278,7 +2148,6 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 mb-12">
           <div class="lg:col-span-2">
-            <!-- 푸터 통합 로고 -->
             <div class="mb-5">
               <a
                 href="#"
@@ -2296,8 +2165,8 @@
               </a>
             </div>
             <p class="text-white/55 text-sm leading-relaxed mb-6 max-w-xs">
-              AI 기술과 친환경 농업의 융합으로 지속 가능한 내일을 만드는 미래
-              농업 전문 기업
+              AI 기술과 친환경 농업의 융합으로 지속 가능한 내일을 <br />만드는
+              미래 농업 전문 기업
             </p>
             <div class="space-y-2 text-xs text-white/45">
               <p>상호명: (주)그린테라 (GreenTerra Inc.)</p>
@@ -2305,9 +2174,7 @@
               <p>본사: 서울특별시 강남구 테헤란로 000 그린테라 타워 10층</p>
               <p>연구소: 경기도 파주시 스마트아그리 파크 101호</p>
               <p>대표전화: 02-1234-5678 | contact@greenterra.com</p>
-              <!-- Social icons (YouTube, LinkedIn, Instagram, GitHub) -->
               <div class="flex gap-3" style="transform: translateY(16px)">
-                <!-- YouTube -->
                 <a
                   href="#"
                   aria-label="YouTube"
@@ -2333,7 +2200,6 @@
                     />
                   </svg>
                 </a>
-                <!-- LinkedIn -->
                 <a
                   href="#"
                   aria-label="LinkedIn"
@@ -2354,7 +2220,6 @@
                     <circle cx="4" cy="4" r="2" stroke-width="2" />
                   </svg>
                 </a>
-                <!-- Instagram -->
                 <a
                   href="#"
                   aria-label="Instagram"
@@ -2383,7 +2248,6 @@
                     />
                   </svg>
                 </a>
-                <!-- GitHub -->
                 <a
                   href="#"
                   aria-label="GitHub"
@@ -2457,7 +2321,6 @@
               </div>
               <ul class="space-y-2.5 text-sm text-white/50">
                 <li>
-                  <!-- 스마트팜 기술 (0번 탭 활성화) -->
                   <button
                     onclick="goToTechTab(0)"
                     class="hover:text-white transition-colors"
@@ -2466,7 +2329,6 @@
                   </button>
                 </li>
                 <li>
-                  <!-- 자동화 시스템 (1번 탭 활성화) -->
                   <button
                     onclick="goToTechTab(1)"
                     class="hover:text-white transition-colors"
@@ -2475,7 +2337,6 @@
                   </button>
                 </li>
                 <li>
-                  <!-- AI 재배 환경 (2번 탭 활성화) -->
                   <button
                     onclick="goToTechTab(2)"
                     class="hover:text-white transition-colors"
@@ -2567,6 +2428,65 @@
     >
       <!-- Injected dynamically by JS -->
     </div>
+
+    <!-- 히어로 섹션 영상 자동 재생 및 막대바 연동 스크립트 -->
+    <script>
+      let currentHeroIndex = 0;
+      const heroVids = document.querySelectorAll(".hero-vid");
+      const totalHeroVids = heroVids.length;
+      let heroTimer = null;
+      const slideDuration = 6000; // 각 영상 재생 시간 (6초)
+      let startTime = null;
+
+      function runHeroSlider() {
+        // 모든 비디오 페이드 아웃 및 일시정지
+        heroVids.forEach((vid, idx) => {
+          vid.classList.remove("opacity-100");
+          vid.classList.add("opacity-0");
+          vid.pause();
+          vid.currentTime = 0;
+
+          // 막대바 초기화
+          const bar = document.getElementById(`bar-${idx}`);
+          if (bar) bar.style.width = "0%";
+        });
+
+        // 현재 영상 페이드 인 및 재생
+        const activeVid = heroVids[currentHeroIndex];
+        activeVid.classList.remove("opacity-0");
+        activeVid.classList.add("opacity-100");
+        activeVid.play().catch(() => {});
+
+        startTime = Date.now();
+        if (heroTimer) clearInterval(heroTimer);
+
+        heroTimer = setInterval(() => {
+          const elapsed = Date.now() - startTime;
+          const progress = Math.min((elapsed / slideDuration) * 100, 100);
+
+          const currentBar = document.getElementById(`bar-${currentHeroIndex}`);
+          if (currentBar) currentBar.style.width = `${progress}%`;
+
+          if (elapsed >= slideDuration) {
+            clearInterval(heroTimer);
+            currentHeroIndex = (currentHeroIndex + 1) % totalHeroVids;
+            runHeroSlider();
+          }
+        }, 50);
+      }
+
+      function switchHeroVideo(index) {
+        currentHeroIndex = index;
+        runHeroSlider();
+      }
+
+      // 페이지 로드 시 히어로 슬라이더 구동
+      window.addEventListener("DOMContentLoaded", () => {
+        if (heroVids.length > 0) {
+          runHeroSlider();
+        }
+      });
+    </script>
 
     <script src="script.js"></script>
   </body>
